@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAMBODIA — IN RUINS</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E8E0C9;color:#1a1a1a;font-family:Georgia,"Times New Roman",Times,serif}
+  a{color:inherit;text-decoration:none}
+  
+  /* FUNCTIONAL TOP RAIL */
+  header{
+    max-width:1300px;
+    margin:0 auto;
+    padding:24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,0,0,.15);
+  }
+  header .logo{
+    font-family:Georgia,"Times New Roman",Times,serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.08em;
+    color:#1a1a1a;
+  }
+  header nav{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  header nav a{
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-left:14px;
+    padding:8px 10px;
+    display:inline-block;
+    opacity:.75;
+  }
+  header nav a:hover{opacity:1}
+
+  .wrap{max-width:1300px;margin:0 auto;padding:18px 14px 60px}
+  
+  /* VINTAGE MASTHEAD */
+  .mast{border-bottom:4px solid #1a1a1a;padding:15px 0 12px;margin-bottom:18px;text-align:center}
+  .mast h1{font-size:clamp(45px, 8vw, 84px);line-height:.85;letter-spacing:.05em;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
+  
+  .mast h1 + span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+  
+  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px;border-top:1px solid #1a1a1a;padding-top:8px}
+
+  /* NEWSPAPER FRONT-PAGE GRID */
+  .paper {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 0.75fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* VERTICAL COLUMN DIVIDERS */
+  .col-left { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-center { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-right { display: flex; flex-direction: column; gap: 18px; }
+  
+  /* UNBOXED VINTAGE STORY BLOCKS */
+  .story{
+    background: transparent;
+    border: none;
+    padding: 0 0 16px 0;
+    box-shadow: none;
+  }
+  .story h2{font-size:26px;line-height:.95;margin:6px 0 10px;font-weight:700;letter-spacing:-0.02em;}
+  
+  .story.lead-feature h2 { font-size: 42px; line-height: 0.9; margin-bottom: 12px; }
+  
+  .story h3{font-size:18px;line-height:1.1;margin:12px 0 8px;border-top:1px solid #1a1a1a;padding-top:10px;font-weight:700;}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#4a3f30;}
+  
+  .story p{font-family:Georgia,"Times New Roman",Times,serif;font-size:13.5px;line-height:1.45;margin-bottom:10px;text-align:justify;color:#222;}
+  .story img{width:100%;height:auto;display:block;border:1px solid #1a1a1a;margin:10px 0 6px;}
+  
+  .tiny{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:4px;margin-bottom:4px;}
+  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block;padding:4px 0;}
+  
+  footer{max-width:1300px;margin:0 auto;padding:20px;border-top:4px double #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  
+  /* RESPONSIVE FLATTENING FOR LAPTOPS/PHONES */
+  @media(max-width:1000px){
+    .paper{grid-template-columns: 1fr 1fr;}
+    .col-left { border: none; padding: 0; }
+    .col-center { border: none; padding: 0; }
+  }
+  @media(max-width:600px){
+    .paper{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:12px; text-align: center;}
+    header nav a { margin: 2px 6px; }
+    .story p { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="../../index.html" class="logo">IN RUINS</a>
+  <nav>
+    <a href="../../travel.html">Travel</a>
+    <a href="../../history.html">History</a>
+    <a href="../../photographs.html">Photos</a>
+    <a href="../../fieldnotes.html">Field Notes</a>
+    <a href="../../backporch.html">Back Porch</a>
+    <a href="../../ride.html">The Ride</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div class="mast">
+    <h1>CAMBODIA</h1>
+    <span>Kep — Battambang — Angkor</span>
+    <div class="sub"><span>The Heart of the Khmer Empire</span><span>Vol. V / No. 01</span></div>
+  </div>
+
+  <div class="paper">
+    
+    <!-- COLUMN 1: LEFT SIDEBAR -->
+    <div class="col-left">
+      <div class="story">
+        <div class="kicker">Kep</div>
+        <h2>Fishing Village</h2>
+        <p>This fishing village is a main supplier of fresh fish for the entire country</p>
+        <a href="kep1.webp"><img src="kep1.webp" alt="fishing village" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Kep</div>
+        <a class="continued" href="Kep.html">Continued →</a>
+      </div>
+      
+      <div class="story">
+        <div class="kicker">Phnom Penh</div>
+        <h2>The Royal Palace</h2>
+        <p>The Royal Palace</p>
+        <a href="royalplc.webp"><img src="royalplc.webp" alt="visit Phnom Penh" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">The Royal Palace</div>
+        <a class="continued" href="Cambodia%20Royal%20Palace.html">Continued →</a>
+      </div>
+    </div>
+
+    <!-- COLUMN 2: CENTER BROAD COLUMN -->
+    <div class="col-center">
+
+      <!-- ARTICLE 1 (LCP Hero Image: fetchpriority="high" added here) -->
+      <div class="story lead-feature">
+        <div class="kicker">Angkor Wat</div>
+        <h2>Angkor</h2>
+        <a href="angkor.webp"><img src="angkor.webp" alt="Angkor Wat" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Angkor Wat — Photo: J Hinterfeller</div>
+        <p>Beautiful architecture and amazing bas reliefs</p>
+        <p>Three days is not enough</p>
+        <h3>One of the Largest Religious Sites in the World</h3>
+        <p>PASTE YOUR ARTICLE TEXT HERE</p>
+      </div>
+
+      <div class="story lead-feature">
+  <div class="kicker">Phnom Banan</div>
+  <h2>A Reflection in the Shadow of Ruins</h2>
+  
+  <!-- Your Centerpiece Photo -->
+  <a href="boypb.webp">
+    <img src="boypb.webp" alt="A young boy squatted on the bow of a pirogue boat on a Cambodian pond" width="800" height="500" loading="lazy">
+  </a>
+  <div class="tiny">Fig. 01 — Phnom Banan Pond — Photo: J Hinterfeller</div>
+  
+  <p>“Can I have a bite?” Sophea asked Rithi.</p>
+  
+  <p>He broke off half of his sticky rice and gave it to his big sister.</p>
+  
+  <p>“We sure found some nice lotus today. I think grandma will have a good day selling at the temple.”</p>
+  
+  <p>“Yeah, today is a lucky day” Rithi smiled. His sister always made him feel good.</p>
+  
+  <p>Sophea popped out a few green seeds from the lotus pod. She tossed them into her mouth and handed the rest to Rithi.</p>
+  
+  <p>At night, they slept with their grandmother on a palm-covered platform with a bamboo slat floor. The Channy family owned it and three more. During the day, the Channys served food for visitors to the Khmer ruins and the nearby Buddhist temple.</p>
+  
+  <p>“Do you want to go swing?” Rithi asked. “You can be princess Tilaka.”</p>
+  
+  <p>She grinned. “Let’s go.”</p>
+  
+  <p>They ran to the shore of the pond in the shadow of Phnom Banan.</p>
+  
+  <p>Rithi jumped onto the pirogue and held his hand out for his sister. She sat on the wooden floor facing him.</p>
+  
+  <p>“Rom Yol, Captain!”</p>
+  
+  <p>Rithi squatted on the cross board of the bow and paddled. He felt proud to be the captain. After all, he was the man of the family now. He was nine years old. The protector. The guide.</p>
+  
+  <p>It stood alone. The giant tree towered out of the high water, its arm stretched horizontally, showing its strength without fatigue. Two ropes hung down, and a wooden board seat swayed a meter above the waterline.</p>
+  
+  <p>Princess Tilaka climbed on and swung. She watched the reflection of the mountain as Rithi’s paddle cut through the forest-green water, moving him away from the landing zone.</p>
+  
+  <p>“Higher! Higher!” he cheered.</p>
+  
+  <p>She swung higher and higher, and with a final pump, she launched herself off into the sky and landed in a refreshing splash. She doggy-paddled to the boat. Rithi rowed over and stopped the swing with his paddle.</p>
+  
+  <p>She used the bow and the swing seat to pull herself aboard.</p>
+  
+  <p>“Your turn,” she said.</p>
+  
+  <p>Rithi handed her the paddle and jumped onto the swing. He stood, using his arms and his whole body-back and forth into a rhythm. He swung so high he thought he might fly off like an egret. He jumped forward and somersaulted into the water.</p>
+  
+  <p>“Wooh!”</p>
+  
+  <p>They rowed back to shore.</p>
+  
+  <p>“Rithi,” Mr. Channy beckoned.</p>
+  
+  <p>Sophea tied the boat to the post of the picnic shelter where they slept-the closest one to the kitchen.</p>
+  
+  <p>Rithi ran over.</p>
+  
+  <p>“Rithi, I heard you this morning,” Mr. Channy said excitedly. “It’s going to be a lucky day, yes?”</p>
+  
+  <p>“Yeah.” He answered in a half whisper, half excited yell. He mimicked Mr. Channy’s tone.</p>
+  
+  <p>“You’re right! Chacham-the whispers say there is a barang here this morning. They saw him walking up the steps to the temple.”</p>
+  
+  <p>“Wow!”</p>
+  
+  <p>“Yeah. Here is what you do…” Mr. Channy leaned in.</p>
+  
+  <p>“Okay.”</p>
+  
+  <p>They high-fived and Rithi went to his sister, who was lazing in a hammock between two palm trees.</p>
+  
+  <p>“Get in the boat.”</p>
+  
+  <p>They rowed to the opposite corner of the pond, close to the ancient stone staircase under the watch of the seven-headed nagas. They waited and watched up the stairs in anticipation.</p>
+  
+  <p>“Is there really a foreigner?” Rithi asked a vendor.</p>
+  
+  <p>“Yes, I saw him already. He went up. He has two or three families with him, many boys and girls your age too,” she replied. “It’s a lucky day.”</p>
+  
+  <p>They made their rounds, talking to everyone.</p>
+  
+  <p>There was a commotion on the old bridge. Selfies were being taken by the naga rails that supported the bridge.</p>
+  
+  <p>“Auntie, Auntie!” They ran up and whispered in the lady’s ear.</p>
+  
+  <p>She smiled, nodded, and shooed them out of the picture.</p>
+  
+  <p>Rithi and Sophea jumped into the boat. “Auntie, Auntie!” he pointed across the pond. The auntie gave them a thumbs-up and a nod.</p>
+  
+  <p>After a while, two tuk-tuks pulled up in front of Channy’s picnic huts, and a herd of hungry people piled out. Cheerful banter filled the air.</p>
+  
+  <p>The barang looked around with peace in his heart. Children surrounded him, barefoot and excited. They rarely saw white-skinned people. He rarely saw life this real, this simple, this beautiful. Mr. and Mrs. Channy put up a feast-eight or nine courses at least.</p>
+  
+  <p>After the bellies were full, Rithi rowed over on his pirogue and called to Auntie. This was his moment to share his expertise. He did not understand the English she spoke.</p>
+  
+  <p>“He wants to give you a tour,” she explained.</p>
+  
+  <p>Of course-adventure was his nature. The barang climbed aboard and sat opposite Rithi. Rithi rowed and rowed, giving the full tour, until they arrived at the giant tree swing.</p>
+  
+  <p>The fat old man used all his might to climb onto the swing. He admired the reflection, and his mind drifted to his eight-year-old self.</p>
+  
+  <p>He remembered hustling in secondhand clothes. A small tourist-town street kid. Crisp summer mornings in Deadwood, SD, tour buses full of Canadians, Japanese, and retirees from everywhere stopped, while on their way to Yellowstone. Before they arrived, he scrubbed the beer glasses in a stale-beer-smelling basement pub for a dollar a morning. In the afternoon, his sleight-of-hand tricks entertained unsuspecting travelers-trading a dime for a quarter. And the week the carnival came-that was when he really put the hustle on. He’d convince a midway game stall to hire him. His cut was usually around a hundred dollars for the week. Those carnies liked the novelty.</p>
+  
+  <p>Now, here, he reflected on a swing, living his best life. He saw himself in the boy.</p>
+  
+  <p>He wanted to launch into the water-higher and higher he pumped. Then he thought about climbing his ass back out. Then he remembered Lake Chapala, when locals warned about a parasite that crawls up into… that was enough. He stopped swinging.</p>
+  
+  <p>They returned to the party.</p>
+  
+  <p>“Don’t tell Mr. Channy.” The tip for the captain was more than the food bill.</p>
+  
+  <p>A lucky day.</p>
+</div>
+
+
+   <!-- ARTICLE 3 (loading="lazy" added here) -->
+     <div class="story lead-feature">
+  <div class="kicker">Phnom Penh</div>
+  <h2>The Museum</h2>
+  <a href="museumpp.webp"><img src="museumpp.webp" alt="National Museum" width="800" height="500" loading="lazy"></a>
+  <div class="tiny">Fig. 01 — National Museum — Photo: J Hinterfeller</div>
+  <p>One of the main museums to visit in Cambodia.</p>
+  
+  <!-- FIXED LINK TAG BELOW -->
+  <p><a href="https://www.nmc.gov.kh/index.php" target="_blank">Visit Official Website →</a></p>
+  
+  <h3>More to come... In the meantime you can view their website for hours, directions and costs</h3>
+  <p>PASTE YOUR ARTICLE TEXT HERE</p>
+</div>
+
+    </div>
+    
+    <!-- COLUMN 3: RIGHT COLUMN -->
+    <div class="col-right">
+      <div class="story">
+        <div class="kicker">The Khmer</div>
+        <h2>Khmer Gopura</h2>
+        <p>Facing the cardinal directions</p>
+        <a href="Khmer1.webp"><img src="Khmer1.webp" alt="Gopura" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Gopura in the Angkor complex</div>
+        <a class="continued" href="gopura.html">Continued →</a>
+      </div> 
+
+      <div class="story">
+        <div class="kicker">Mobile Club</div>
+        <h2>Scooter Bar</h2>
+        <p>This young entrepreneur converted his 125cc Honda into a party to go</p>
+        <a href="tukbar.webp"><img src="tukbar.webp" alt="TukBar" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Scooter Bar</div>
+        <a class="continued" href="scooter-bar.html">Continued →</a>
+      </div>
+    </div>
+
+  </div> <!-- End of Paper Grid -->
+</div> <!-- End of Wrap -->
+
+<footer>IN RUINS — CAMBODIA</footer>
+</body>
+</html>

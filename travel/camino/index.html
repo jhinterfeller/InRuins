@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAMINO — IN RUINS</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E8E0C9;color:#1a1a1a;font-family:Georgia,"Times New Roman",Times,serif}
+  a{color:inherit;text-decoration:none}
+
+  header{
+    max-width:1300px;
+    margin:0 auto;
+    padding:24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,0,0,.15);
+  }
+  header .logo{font-family:Georgia,serif;font-weight:700;font-size:22px;letter-spacing:.08em}
+  header nav{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header nav a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-left:24px;opacity:.6}
+  header nav a:hover{opacity:1}
+
+  .wrap{max-width:1300px;margin:0 auto;padding:18px 14px 60px}
+
+  .mast{border-bottom:3px double #1a1a1a;padding:10px 0 12px;margin-bottom:14px;text-align:center}
+  .mast h1{font-size:64px;line-height:.9;letter-spacing:.02em}
+  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:8px;border-top:1px solid #1a1a1a;padding-top:6px}
+
+  .paper{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:14px;align-items:start}
+  .story{background:#fdfcf6;border:1.5px solid #1a1a1a;padding:14px 14px 12px}
+  .story h2{font-size:28px;line-height:.95;margin:6px 0 8px}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+  .story p{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.45;margin-bottom:8px}
+  .story img{width:100%;display:block;border:1px solid #1a1a1a;margin:8px 0 8px}
+  .placeholder{
+    border:1.5px dashed #1a1a1a;
+    background:rgba(232,224,201,.45);
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:20px 10px;margin:8px 0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block}
+
+  footer{max-width:1300px;margin:0 auto;padding:14px 20px;border-top:2px solid #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+
+  @media(max-width:900px){.paper{grid-template-columns:1fr 1fr}.mast h1{font-size:46px}header{flex-direction:column;gap:12px}}
+  @media(max-width:600px){.paper{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="../../index.html" class="logo">IN RUINS</a>
+  <nav>
+    <a href="../../travel.html">Travel</a>
+    <a href="../../history.html">History</a>
+    <a href="../../photographs.html">Photos</a>
+    <a href="../../fieldnotes.html">Field Notes</a>
+    <a href="../../backporch.html">Back Porch</a>
+    <a href="../../ride.html">The Ride</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <div class="mast">
+    <h1>CAMINO</h1>
+    <div class="sub"><span>Camino de Santiago</span><span>Pamplona • 900km</span><span>Vol. IV / No. 01</span></div>
+  </div>
+
+  <div class="paper">
+
+    <!-- COLUMN 1: HERO STORY -->
+    <div class="story">
+      <div class="kicker">Pamplona</div>
+      <h2>Pamplona Rain Story</h2>
+      <div class="placeholder" style="height:200px">DROP HERO PHOTO HERE — PAMPLONA</div>
+      <p>walking in the rain all day to Pamplona trading in my 500 usd waterproof outfit for a 3 euro parka and the kind shopkeeper...</p>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div style="display:grid;gap:14px;">
+
+      <div class="story">
+        <div class="kicker">Gear</div>
+        <h2 style="font-size:22px;">ENTER TITLE HERE — Gear</h2>
+        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
+        <a class="continued" href="gear.html">Continued →</a>
+      </div>
+
+      <div class="story">
+        <div class="kicker">Food</div>
+        <h2 style="font-size:22px;">ENTER TITLE HERE — Food</h2>
+        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
+        <a class="continued" href="food.html">Continued →</a>
+      </div>
+
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div style="display:grid;gap:14px;">
+
+      <div class="story">
+        <div class="kicker">Favorite Stops</div>
+        <h2 style="font-size:22px;">ENTER TITLE HERE</h2>
+        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
+        <a class="continued" href="favorite-stops.html">Continued →</a>
+      </div>
+
+      <div class="story">
+        <div class="kicker">Next Page</div>
+        <h3 style="font-size:16px;">To Be Continued</h3>
+        <p>More miles, more stories. This page will grow.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer>IN RUINS — CAMINO</footer>
+</body>
+</html>

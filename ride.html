@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IN RUINS — THE RIDE</title>
+<style>
+  /* RESET & BASE STYLES */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+
+  a { color:#C03814; text-decoration: none; }
+  a:hover { text-decoration: underline; color: #3410ad; }
+
+  /* NAVIGATION RAIL */
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #111111;
+    padding: 5px;
+  }
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #111111;
+    text-transform: uppercase;
+  }
+  .navlinks a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 14px;
+    color: #444444;
+    padding: 6px 10px;
+    display: inline-block;
+  }
+  .navlinks a:hover { color: #C03814; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* RIDE MASTHEAD HERO */
+  .hero-mast {
+    background: #ffffff;
+    border-top: 4px solid #111111;
+    border-bottom: 1px solid #111111;
+    margin: 40px auto;
+    padding: 50px 20px 40px;
+    text-align: center;
+    position: relative;
+  }
+  .hero-mast .badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3410ad;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    text-transform: uppercase;
+  }
+  .hero-mast .kicker {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #C03814;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .hero-mast h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: clamp(36px, 6vw, 68px);
+    line-height: 0.9;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .hero-mast p {
+    font-style: italic;
+    font-size: 20px;
+    color: #555555;
+    letter-spacing: 0.5px;
+  }
+
+  /* TWO COLUMN MAGAZINE SPREAD */
+  .magazine-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  /* MAIN FEATURE ARTICLE (LEFT) */
+  .main-feature {
+    background: #ffffff;
+    border-top: 2px solid #C03814;
+    padding-top: 20px;
+  }
+  .article-header {
+    border-bottom: 1px solid #111111;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+  .article-header h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #111111;
+    letter-spacing: 0px;
+    line-height: 1;
+  }
+  .article-header .subtext {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #3410ad;
+    margin-top: 8px;
+  }
+
+  .body-copy p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #222222;
+    text-align: justify;
+  }
+  
+  
+
+  /* SIDEBAR / TECH SPECS & FIELD NOTES (RIGHT) */
+  .sidebar-box {
+    background: #ffffff;
+    border: 1px solid #111111;
+    padding: 30px 24px;
+    position: relative;
+    align-self: start;
+  }
+  .sidebar-box h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #111111;
+    margin: -30px -24px 25px -24px;
+    padding: 12px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .spec-item {
+    border-bottom: 1px solid #eeeeee;
+    padding: 14px 0;
+  }
+  .spec-item:last-of-type {
+    border-bottom: none;
+  }
+  .spec-item strong {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #C03814;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .spec-item span {
+    font-size: 14px;
+    color: #333333;
+  }
+
+  /* BUTTON STYLING */
+  .btn-biker {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #3410ad;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-biker:hover {
+    background: #C03814;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* FULL WIDTH CALLOUT QUOTE */
+  .banner-quote {
+    background: #ffffff;
+    color: #111111;
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+    margin: 60px 0 40px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .banner-quote blockquote {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    font-size: clamp(12px, 2vw, 24px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #C03814;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid #111111;
+    padding-top: 24px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666666;
+  }
+  footer strong { color: #3410ad; }
+
+  /* RESPONSIVE LAYOUT */
+  @media(max-width: 800px) {
+    .magazine-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../../index.html">IN RUINS</a>
+    <div class="navlinks">
+      <a href="../../travel.html">Travel</a>
+      <a href="../../history.html">History</a>
+      <a href="../../photographs.html">Photos</a>
+      <a href="../../fieldnotes.html">Field Notes</a>
+      <a href="../../backporch.html">Back Porch</a>
+      <a href="../../ride.html" style="color:#C03814;">The Ride</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- RIDE MASTHEAD HERO -->
+  <section class="hero-mast">
+    <div class="badge">Ride</div>
+    <div class="kicker">The Ride — Vol. 1</div>
+    <h1>Protect Your Eyes</h1>
+    <p>watch for wet leaves</p>
+  </section>
+
+  <!-- MAGAZINE SPREAD GRID -->
+  <div class="magazine-grid">
+    
+    <!-- MAIN STORY / CONTENT COLUMN -->
+    <main class="main-feature">
+      <div class="article-header">
+        <h2>hmm, well... never seen that before</h2>
+        <div class="subtext">Editorial Content &amp; Freedom on Two Wheels</div>
+      </div>
+
+      <div class="body-copy">
+        <p>Cruising Isaan on the Honda 500x</p>
+        
+        <p>Explore the Yucatan Peninsula </p>
+        
+        <p>Say hi to the stage hill road crew</p>
+      </div>
+    </main>
+
+    <!-- SIDEBAR / SPECS / CONTACT BOX -->
+    <aside class="sidebar-box">
+      <h3>Trail Notes</h3>
+      
+      <div class="spec-item">
+        <strong>Look Ahead</strong>
+        <span>Take it easy &amp; eyes where you are going</span>
+      </div>
+
+      <div class="spec-item">
+        <strong>Content &amp; Writing</strong>
+        <span>Slow ride</span>
+      </div>
+
+      <div class="spec-item">
+        <strong>gear</strong>
+        <span>the left</span>
+      </div>
+
+      <div class="spec-item">
+        <strong>Road Conditions</strong>
+        <span>asphalt, gravel, mud, or snow.</span>
+      </div>
+
+      <a class="btn-biker" href="mailto:jhinterfeller@gmail.com">Dispatch Mail →</a>
+    </aside>
+
+  </div>
+
+</div>
+
+<!-- FULL-WIDTH CALLOUT QUOTE -->
+<section class="banner-quote">
+  <div class="wrap">
+    <blockquote>“LOOK MOM, NO HANDS!”</blockquote>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>THE RIDE</strong> — IN RUINS - INDEPENDENCE</p>
+  </div>
+</footer>
+
+</body>
+</html>
+

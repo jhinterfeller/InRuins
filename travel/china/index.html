@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHINA — IN RUINS</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E8E0C9;color:#1a1a1a;font-family:Georgia,"Times New Roman",Times,serif}
+  a{color:inherit;text-decoration:none}
+  
+  /* FUNCTIONAL TOP RAIL */
+  header{
+    max-width:1300px;
+    margin:0 auto;
+    padding:24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,0,0,.15);
+  }
+  header .logo{
+    font-family:Georgia,"Times New Roman",Times,serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.08em;
+    color:#1a1a1a;
+  }
+  header nav{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  header nav a{
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-left:14px;
+    padding:8px 10px;
+    display:inline-block;
+    opacity:.75;
+  }
+  header nav a:hover{opacity:1}
+
+  .wrap{max-width:1300px;margin:0 auto;padding:18px 14px 60px}
+  
+  /* VINTAGE MASTHEAD */
+  .mast{border-bottom:4px solid #1a1a1a;padding:15px 0 12px;margin-bottom:18px;text-align:center}
+  .mast h1{font-size:clamp(45px, 8vw, 84px);line-height:.85;letter-spacing:.05em;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
+  
+  .mast h1 + span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+  
+  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px;border-top:1px solid #1a1a1a;padding-top:8px}
+
+  /* NEWSPAPER FRONT-PAGE GRID */
+  .paper {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 0.75fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* VERTICAL COLUMN DIVIDERS */
+  .col-left { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-center { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-right { display: flex; flex-direction: column; gap: 18px; }
+  
+  /* UNBOXED VINTAGE STORY BLOCKS */
+  .story{
+    background: transparent;
+    border: none;
+    padding: 0 0 16px 0;
+    box-shadow: none;
+  }
+  .story h2{font-size:26px;line-height:.95;margin:6px 0 10px;font-weight:700;letter-spacing:-0.02em;}
+  
+  .story.lead-feature h2 { font-size: 42px; line-height: 0.9; margin-bottom: 12px; }
+  
+  .story h3{font-size:18px;line-height:1.1;margin:12px 0 8px;border-top:1px solid #1a1a1a;padding-top:10px;font-weight:700;}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#4a3f30;}
+  
+  .story p{font-family:Georgia,"Times New Roman",Times,serif;font-size:13.5px;line-height:1.45;margin-bottom:10px;text-align:justify;color:#222;}
+  .story img{width:100%;height:auto;display:block;border:1px solid #1a1a1a;margin:10px 0 6px;}
+  
+  .tiny{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:4px;margin-bottom:4px;}
+  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block;padding:4px 0;}
+  
+  footer{max-width:1300px;margin:0 auto;padding:20px;border-top:4px double #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  
+  /* RESPONSIVE FLATTENING FOR LAPTOPS/PHONES */
+  @media(max-width:1000px){
+    .paper{grid-template-columns: 1fr 1fr;}
+    .col-left { border: none; padding: 0; }
+    .col-center { border: none; padding: 0; }
+  }
+  @media(max-width:600px){
+    .paper{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:12px; text-align: center;}
+    header nav a { margin: 2px 6px; }
+    .story p { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="../../index.html" class="logo">IN RUINS</a>
+  <nav>
+    <a href="../../travel.html">Travel</a>
+    <a href="../../history.html">History</a>
+    <a href="../../photographs.html">Photos</a>
+    <a href="../../fieldnotes.html">Field Notes</a>
+    <a href="../../backporch.html">Back Porch</a>
+    <a href="../../ride.html">The Ride</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div class="mast">
+    <h1>CHINA</h1>
+    <span>Shenyang - Harbin - Liaoning</span>
+    <div class="sub"><span>Imperial Cities The Great Wall Ming Tombs</span><span>Vol. IV / No. 01</span></div>
+  </div>
+
+  <div class="paper">
+    
+    <!-- COLUMN 1: LEFT SIDEBAR -->
+    <div class="col-left">
+      <div class="story">
+        <div class="kicker">Shenyang</div>
+        <h2>Imperial City</h2>
+        <p>Beatiful Ancient Capital</p>
+        <a href="shen.webp"><img src="shen.webp" alt="Shenyang" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Jin and Qing Dynasties</div>
+        <a class="continued" href="Shenyang.html">Continued →</a>
+      </div>
+      
+      <div class="story">
+        <div class="kicker">Breadman</div>
+        <h2>Bread delivery</h2>
+        <p>This man owns a bakery.</p>
+        <a href="breadman_res.webp"><img src="breadman_res.webp" alt="bread delivery to the local shops" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Harbin</div>
+        <a class="continued" href="breadman.html">Continued →</a>
+      </div>
+    </div>
+    <!-- COLUMN 2: CENTER BROAD COLUMN -->
+    <div class="col-center">
+
+      <!-- ARTICLE 1 -->
+      <div class="story lead-feature">
+        <div class="kicker">ZhuiZiShan</div>
+        <h2>Three Dynasties Three Walls</h2>
+        <a href="ZUizi_res.webp"><img src="ZUizi_res.webp" alt="ZhuiZiShan" width="800" height="500" loading="lazy"></a>
+        <div class="tiny">Fig. 02 — ZhuiZiShan — Photo: J Hinterfeller</div>
+        <p>Better than Badaling</p>
+        <p>Getting there was a little tricky</p>
+        <h3>Three Walls Intersect</h3>
+        <p>The train was built for people shorter than me. Each side had a bench seat that faced the opposite seat. I sat with my knees invading the space of the passenger across from me. We rode cramped and uncomfortable for about three hours from Changchun through rural northeast China.</p>
+        <p>I got off the train exactly where I was supposed to. It was a reputable brand of map, purchased in Beijing. I was the only one who got off at this stop. There was nothing around. This felt right because I was trying to find an unpopular but historically significant section of the Great Wall and nothing should be there.</p>
+        <p>A group of taxi drivers were hanging around smoking cigarettes. They didn’t approach me. I asked them, in Mandarin, where I could find Zhuizi Shan (Awl Mountain). They all stood silent shaking their heads. For twenty minutes I pointed at the map trying to explain. They had a meeting. Huddled in a circle, one would look up on occasion and give me a glance. Meeting finished, they all nodded in agreement. I felt relief as one taxi driver opened his door for me and we set off.</p>
+        <p>We drove for about fifteen minutes. He dropped me off out near a barren corn field. I hiked up onto a hill and could see about ten houses to my right and a small village to the left. I camped for the night. A walk, a bus, a sporting goods store, and a four hour wait on a corner later the real journey began.</p>
+        <p>A little red car stopped and a friendly woman offered me a ride. She pulled over and threw my pack into the trunk. She nodded as I explained where I was going. “Thirty minutes,” she said. She knew where we were going. Again, I felt relief, but this time it was more powerful.</p>
+        <p>Half an hour later, after watching her call everyone she knew, I realized we were just driving. I like the momentum, but I had no idea what exactly was going on. My heart sank. I needed to abort this adventure and regroup. “I got it!” She put down her phone and had a big smile. “Two hours.” Two hours, okay… “Are you sure you don’t mind driving that far?” “We go.” She was happy, so I was happy.</p>
+        <p>Three hours passed. We are now in a tiny red car, looking straight up at the sky. The dirt switchback road was barely visible below the hood ornament. The engine revved, then the sound of the flat rocks slipping under the tires. The smell of burning clutch filled the air. She worked the clutch like a rally racer. Up one car length and then a slide back half the distance gained. My hand gripped the door handle, ready to bail. There was no way we could turn and go back down, gravity would take us down the fast way. Beads of sweat glistened on her forehead. I asked if I could drive. She got mad. I took a deep breath. She held hers. Up and slide, up and slide… The rhythm worked as she danced that car up the mountain and I’ll be damned if we didn’t make it.</p>
+        <p>The crest of the mountain was actually the base of another mountain. And there it was, fallen but not forgotten. A wall that was more like a mound of rubble. Stonework from people who had never heard of the Ming. The oldest section. This poor lady and her pretty red car just went through hell. She popped the trunk and I got my pack. We had earlier agreed on a price of thirty yuan, about five bucks. I gave her three hundred yuan instead and she accepted. Unfortunately, that is not enough to cover the tires and the clutch replacement. I hope she enjoys telling the story as much as I do.</p>
+        <p>Happy to have my feet on solid ground, I walked up the wall not wanting to see what happened next. She sat there for about three minutes. A motorcycle came from the opposite direction. They talked for a few minutes and she drove in the direction he came from. I was relieved, she had guidance from a local.</p>
+        <p>I looked for a spot to set up camp for the night. A no camping sign appeared, as if it knew I was coming. Damn. Now what? There are no Intercontinental hotels out here. Not knowing what to do other than try to find a hidden place, I walked down to the road. The same direction she went. I shook my head the whole way as I walked down the other side. This road was paved. Gently sweeping grade, a kid could skateboard down it with no problem. It led to a village. The people were so delightful and welcoming. I was able to rent a room in the village chief’s outbuilding. For six days, I hiked and explored this wonderful section of history. When you decide to go, be aware that cartographers in Beijing aren’t too particular on where they put dots.</p>
+        <p><strong>Update:</strong> There is now a very good route posted online on how to get to Zhuizi Shan, a journey worth taking.</p>
+      </div>
+
+      <!-- ARTICLE 2 -->
+      <div class="story lead-feature">
+        <div class="kicker">XingCheng</div>
+        <h2>Fortified City</h2>
+        <a href="xing.webp"><img src="xing.webp" alt="xing" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Fig. 01 — XingCheng — Photo: J Hinterfeller</div>
+        <p>ENTER YOUR OPENING HOOK / INTRO PARAGRAPH HERE</p>
+        <p>ENTER A SECOND PARAGRAPH HERE IF YOU WANT ONE</p>
+        <h3>ENTER SUB-STORY TITLE HERE</h3>
+        <p>PASTE YOUR ARTICLE TEXT HERE</p>
+      </div>
+
+    </div>
+
+    
+    <!-- COLUMN 3: RIGHT COLUMN -->
+    <div class="col-right">
+      <div class="story">
+        <div class="kicker">Tea</div>
+        <h2>Red Tea Green Tea</h2>
+        <p>compacted tea in the shape of old money</p>
+        <a href="tea.webp"><img src="tea.webp" alt="tea" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">tea</div>
+        <a class="continued" href="tea.html">Continued →</a>
+      </div> 
+
+      <div class="story">
+        <div class="kicker">Farmer</div>
+        <h2>Crop Man</h2>
+        <p>working the fields by hand</p>
+        <a href="Cropman_res.webp"><img src="Cropman_res.webp" alt="Cropman" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Crop Man</div>
+        <a class="continued" href="Cropman.html">Continued →</a>
+      </div>
+    </div>
+
+  </div> <!-- End of Paper Grid -->
+</div> <!-- End of Wrap -->
+
+<footer>IN RUINS — China</footer>
+</body>
+</html>

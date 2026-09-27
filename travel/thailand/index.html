@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THAILAND — IN RUINS</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#E8E0C9;color:#1a1a1a;font-family:Georgia,"Times New Roman",Times,serif}
+  a{color:inherit;text-decoration:none}
+  
+  /* FUNCTIONAL TOP RAIL */
+  header{
+    max-width:1300px;
+    margin:0 auto;
+    padding:24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,0,0,.15);
+  }
+  header .logo{
+    font-family:Georgia,"Times New Roman",Times,serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.08em;
+    color:#1a1a1a;
+  }
+  header nav{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  header nav a{
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-left:14px;
+    padding:8px 10px;
+    display:inline-block;
+    opacity:.75;
+  }
+  header nav a:hover{opacity:1}
+
+  .wrap{max-width:1300px;margin:0 auto;padding:18px 14px 60px}
+  
+  /* VINTAGE MASTHEAD */
+  .mast{border-bottom:4px solid #1a1a1a;padding:15px 0 12px;margin-bottom:18px;text-align:center}
+  .mast h1{font-size:clamp(45px, 8vw, 84px);line-height:.85;letter-spacing:.05em;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
+  
+  .mast h1 + span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+  
+  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px;border-top:1px solid #1a1a1a;padding-top:8px}
+
+  /* NEWSPAPER FRONT-PAGE GRID */
+  .paper {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 0.75fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* VERTICAL COLUMN DIVIDERS */
+  .col-left { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-center { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-right { display: flex; flex-direction: column; gap: 18px; }
+  
+  /* UNBOXED VINTAGE STORY BLOCKS */
+  .story{
+    background: transparent;
+    border: none;
+    padding: 0 0 16px 0;
+    box-shadow: none;
+  }
+  .story h2{font-size:26px;line-height:.95;margin:6px 0 10px;font-weight:700;letter-spacing:-0.02em;}
+  
+  /* LARGE BREAKING FEATURE HEADLINE */
+  .story.lead-feature h2 { font-size: 42px; line-height: 0.9; margin-bottom: 12px; }
+  
+  .story h3{font-size:18px;line-height:1.1;margin:12px 0 8px;border-top:1px solid #1a1a1a;padding-top:10px;font-weight:700;}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#4a3f30;}
+  
+  .story p{font-family:Georgia,"Times New Roman",Times,serif;font-size:13.5px;line-height:1.45;margin-bottom:10px;text-align:justify;color:#222;}
+  .story img{width:100%;height:auto;display:block;border:1px solid #1a1a1a;margin:10px 0 6px;}
+  
+  .tiny{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:4px;margin-bottom:4px;}
+  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block;padding:4px 0;}
+  
+  footer{max-width:1300px;margin:0 auto;padding:20px;border-top:4px double #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  
+  /* RESPONSIVE FLATTENING FOR LAPTOPS/PHONES */
+  @media(max-width:1000px){
+    .paper{grid-template-columns: 1fr 1fr;}
+    .col-left { border: none; padding: 0; }
+    .col-center { border: none; padding: 0; }
+  }
+  @media(max-width:600px){
+    .paper{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:12px; text-align: center;}
+    header nav a { margin: 2px 6px; }
+    .story p { text-align: left; }
+  }
+   /* NEW ADAPTIVE IMAGE GALLERY FOR THE CENTER STORY */
+  .story-gallery {
+    display: flex;
+    gap: 15px;
+    margin: 18px 0;
+  }
+  .gallery-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-item img {
+    margin: 0 0 6px 0 !important; /* Overrides default margins to keep it crisp */
+  }
+  
+  /* Forces the gallery images to stack vertically on phones */
+  @media (max-width: 600px) {
+    .story-gallery {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <a href="../../index.html" class="logo">IN RUINS</a>
+  <nav>
+    <a href="../../travel.html">Travel</a>
+    <a href="../../history.html">History</a>
+    <a href="../../photographs.html">Photos</a>
+    <a href="../../fieldnotes.html">Field Notes</a>
+    <a href="../../backporch.html">Back Porch</a>
+    <a href="../../ride.html">The Ride</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div class="mast">
+    <h1>THAILAND</h1>
+    <span>Resplendent & Transcendent</span>
+    <div class="sub"><span>Elysian Landscapes, Culinary Whiplash, Joy & Grit</span><span>Vol. II / No. 01</span></div>
+  </div>
+
+  <div class="paper">
+    
+    <!-- COLUMN 1: LEFT SIDEBAR -->
+    <div class="col-left">
+      <div class="story">
+        <div class="kicker">Mukdahan</div>
+        <h2>Naga King Guardian of the Pearl Buddha</h2>
+        <p>Traditions & Folklore</p>
+        <a href="perlbud_res.webp"><img src="perlbud_res.webp" alt="Mukdahan Pearl Buddha" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Mukdahan</div>
+        <a class="continued" href="Mukdahan.html">Continued →</a>
+      </div>
+      
+      <div class="story">
+        <div class="kicker">Bangkok</div>
+        <h2>Not Boring</h2>
+        <p>Urban Extremities</p>
+        <a href="bkk4.webp"><img src="bkk4.webp" alt="Bangkok" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">City of Angels</div>
+        <a class="continued" href="bangkok.html">Continued →</a>
+      </div>
+     <div class="story">
+        <div class="kicker">Erawan Falls</div>
+        <h2>Nature</h2>
+        <a href="erawan.webp"><img src="erawan.webp" alt="Erawan National Park" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Fig. 01 — Erawan Falls — Photo: J Hinterfeller</div>
+        <p>It would take a lifetime to explore all the wonders of Thailand</p>
+        <p>ENTER A SECOND PARAGRAPH HERE</p>
+        <h3>ENTER TO EXPLORE NATURE</h3>
+        <p>PASTE YOUR ARTICLE TEXT HERE</p>
+      </div>
+    </div>
+
+        <!-- COLUMN 2: CENTER BROAD COLUMN (Lead Feature Story) -->
+    <div class="col-center">
+      <div class="story lead-feature">
+        <div class="kicker">Sukhothai</div>
+        <h2>The Ancient Capital</h2>
+        
+        <!-- Your Grand Sukhothai Centerpiece Photo -->
+        <a href="suk_res.webp"><img src="suk_res.webp" alt="Sukhothai Historical Park Ancient Ruins" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Fig. 01 — Sukhothai Historical Park — Photo: J Hinterfeller</div>
+        
+       <p>The morning carried that brief, deceptive cool before the tropical heat settles in. I slept well at the Withoon Guesthouse; quiet, cheap, and run by kind women. They were helpful and friendly with polite smiles and the customary, silent gestures of a language barrier. For thirty baht, barely a dollar, I rented a bicycle that may have been my age. The seat rolled around beneath me, the handlebars wobbled, and the brakes ground metal-on-metal every time I slowed down. "Adventure," I muttered, in self-satisfied optimism, as I rattled my way out of town.</p>
+
+<p>The off-season hung heavy over Sukhothai. You could feel it in the quiet streets and the desperate edge of the local commerce.  I was no longer in Khukhan, where I teach. There, life has a predictable rhythm. There I am just a neighbor, never a target for the expat tax. But Sukhothai is an economy built on transient visitors, people who arrive from places where their money has a different value. They don't really notice, and if they do, they typically accept it, comparing it to prices back home. It is a bargain for them. They look at ruins, and leave forever. There is no incentive to give a farang local prices because there is no repeat business.</p>
+
+<p>I felt the friction of this at a small stationery shop. The owner rang up a notebook for one hundred baht. The printed price tag clearly read sixty. When I caught his eye, showing the tag with a silent, questioning look, he didn't blink. He just gave me an apathetic, slow-motion shrug that said everything: you can afford it, and what are you going to do about it anyway? It's the minor annoyance of being a guest in a Southeast Asian tourist town, especially during slow season. You pay the price, swallow the irritation, and keep moving.</p>
+
+<p>I pedaled the rickety bike north along Route 12 until it turned west, then i turned right on Route 1113 to keep my heading, followed the road out over the two burms of the ancient moats that once squared off the old city. Beyond this to my right stood the weathered, Khmer-style prasat of Wat Phra Phai Luang, remnant of the empire that held this ground before the two brothers decided they had had enough with the exploitation of a distant ruler. I kept riding along the edge of the square moat, turned left with the water. The remains of the ancient pottery kilns sat on the right.</p>
+
+
+        <!-- Your Side-by-Side Adaptive Kiln Gallery -->
+        <div class="story-gallery">
+          <div class="gallery-item">
+            <a href="kiln.webp"><img src="kiln.webp" alt="The ancient Thuriang pottery kilns of Sukhothai" width="400" height="300" loading="lazy"></a>
+            <div class="tiny">Fig. 02 — The Thuriang Kilns</div>
+          </div>
+          <div class="gallery-item">
+            <a href="shard_res.webp"><img src="shard_res.webp" alt="Sangkhalok pottery shards in the grass" width="400" height="300" loading="lazy"></a>
+            <div class="tiny">Fig. 03 — Sangkhalok Shards</div>
+          </div>
+        </div>
+
+        <p>Walking among the ruins of the Thuriang Kilns, the modern world and its petty financial frictions finally evaporated. Shards of discarded Sangkhalok ceramics that failed the final inspection seven centuries ago peeked up through the grass. I stood there nearly alone.  A solitary local man cast a fishing line into the green waters of the moat. It wasn’t long before I let my mind drift. You could almost feel the heat of the massive fires, but that was just the sun breaking the morning freshness. I imagined the children hauling river mud, and the commands of master artisans throwing pottery destined for the high markets of Imperial China. It is a spectacular, abandoned place, and easily one of the finest mornings I’ve ever spent on the road.</p>
+      </div>
+    </div>
+
+    
+    <!-- COLUMN 3: RIGHT COLUMN -->
+    <div class="col-right">
+      <div class="story">
+        <div class="kicker">Hospitality</div>
+        <h2>Quick To Smile</h2>
+        <p>Genuine & Sincere</p>
+        <a href="hospitality.webp"><img src="hospitality.webp" alt="Koh Larn" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Koh Larn</div>
+        <a class="continued" href="hospitality.html">Continued →</a>
+      </div>
+
+      <div class="story">
+        <div class="kicker">The Food OMG The Food</div>
+        <h2>Tom Yum Goong</h2>
+        <p>Made With Love</p>
+        <div class="tiny">complex contrasts</div>
+       <a href="taifdgd.webp"><img src="taifdgd.webp" alt="Tom Yum" width="400" height="300" loading="lazy"></a>
+        <a class="continued" href="Thaifood.html">Continued →</a>
+      </div>
+    </div>
+
+  </div> <!-- End of Paper Grid -->
+</div> <!-- End of Wrap -->
+
+<footer>IN RUINS — THAILAND</footer>
+</body>
+</html>
