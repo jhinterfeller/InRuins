@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CAMINO — IN RUINS</title>
+<title>CAMINO DE SANTIAGO — IN RUINS</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:#E8E0C9;color:#1a1a1a;font-family:Georgia,"Times New Roman",Times,serif}
   a{color:inherit;text-decoration:none}
-
+  
+  /* FUNCTIONAL TOP RAIL */
   header{
     max-width:1300px;
     margin:0 auto;
@@ -18,37 +19,92 @@
     align-items:center;
     border-bottom:1px solid rgba(0,0,0,.15);
   }
-  header .logo{font-family:Georgia,serif;font-weight:700;font-size:22px;letter-spacing:.08em}
-  header nav{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-  header nav a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-left:24px;opacity:.6}
+  header .logo{
+    font-family:Georgia,"Times New Roman",Times,serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.08em;
+    color:#1a1a1a;
+  }
+  header nav{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  header nav a{
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-left:14px;
+    padding:8px 10px;
+    display:inline-block;
+    opacity:.75;
+  }
   header nav a:hover{opacity:1}
 
   .wrap{max-width:1300px;margin:0 auto;padding:18px 14px 60px}
-
-  .mast{border-bottom:3px double #1a1a1a;padding:10px 0 12px;margin-bottom:14px;text-align:center}
-  .mast h1{font-size:64px;line-height:.9;letter-spacing:.02em}
-  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:8px;border-top:1px solid #1a1a1a;padding-top:6px}
-
-  .paper{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:14px;align-items:start}
-  .story{background:#fdfcf6;border:1.5px solid #1a1a1a;padding:14px 14px 12px}
-  .story h2{font-size:28px;line-height:.95;margin:6px 0 8px}
-  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
-  .story p{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.45;margin-bottom:8px}
-  .story img{width:100%;display:block;border:1px solid #1a1a1a;margin:8px 0 8px}
-  .placeholder{
-    border:1.5px dashed #1a1a1a;
-    background:rgba(232,224,201,.45);
-    display:flex;align-items:center;justify-content:center;
-    text-align:center;padding:20px 10px;margin:8px 0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  
+  /* VINTAGE MASTHEAD */
+  .mast{border-bottom:4px solid #1a1a1a;padding:15px 0 12px;margin-bottom:18px;text-align:center}
+  .mast h1{font-size:clamp(45px, 8vw, 84px);line-height:.85;letter-spacing:.05em;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
+  
+  .mast h1 + span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-style: italic;
+    opacity: 0.85;
   }
-  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block}
+  
+  .mast .sub{display:flex;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px;border-top:1px solid #1a1a1a;padding-top:8px}
 
-  footer{max-width:1300px;margin:0 auto;padding:14px 20px;border-top:2px solid #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  /* NEWSPAPER FRONT-PAGE GRID */
+  .paper {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 0.75fr;
+    gap: 20px;
+    align-items: start;
+  }
 
-  @media(max-width:900px){.paper{grid-template-columns:1fr 1fr}.mast h1{font-size:46px}header{flex-direction:column;gap:12px}}
-  @media(max-width:600px){.paper{grid-template-columns:1fr}}
+  /* VERTICAL COLUMN DIVIDERS */
+  .col-left { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-center { border-right: 1px dashed rgba(26,26,26,0.3); padding-right: 10px; display: flex; flex-direction: column; gap: 18px; }
+  .col-right { display: flex; flex-direction: column; gap: 18px; }
+  
+  /* UNBOXED VINTAGE STORY BLOCKS */
+  .story{
+    background: transparent;
+    border: none;
+    padding: 0 0 16px 0;
+    box-shadow: none;
+  }
+  .story h2{font-size:26px;line-height:.95;margin:6px 0 10px;font-weight:700;letter-spacing:-0.02em;}
+  
+  .story.lead-feature h2 { font-size: 42px; line-height: 0.9; margin-bottom: 12px; }
+  
+  .story h3{font-size:18px;line-height:1.1;margin:12px 0 8px;border-top:1px solid #1a1a1a;padding-top:10px;font-weight:700;}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#4a3f30;}
+  
+  .story p{font-family:Georgia,"Times New Roman",Times,serif;font-size:13.5px;line-height:1.45;margin-bottom:10px;text-align:justify;color:#222;}
+  .story img{width:100%;height:auto;display:block;border:1px solid #1a1a1a;margin:10px 0 6px;}
+  
+  .tiny{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:4px;margin-bottom:4px;}
+  .continued{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1a1a1a;display:inline-block;padding:4px 0;}
+  
+  footer{max-width:1300px;margin:0 auto;padding:20px;border-top:4px double #1a1a1a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+  
+  /* RESPONSIVE FLATTENING FOR LAPTOPS/PHONES */
+  @media(max-width:1000px){
+    .paper{grid-template-columns: 1fr 1fr;}
+    .col-left { border: none; padding: 0; }
+    .col-center { border: none; padding: 0; }
+  }
+  @media(max-width:600px){
+    .paper{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:12px; text-align: center;}
+    header nav a { margin: 2px 6px; }
+    .story p { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -66,62 +122,96 @@
 </header>
 
 <div class="wrap">
-
   <div class="mast">
-    <h1>CAMINO</h1>
-    <div class="sub"><span>Camino de Santiago</span><span>Pamplona • 900km</span><span>Vol. IV / No. 01</span></div>
+    <h1>CAMINO DE SANTIAGO</h1>
+    <span>Camino Frances</span>
+    <div class="sub"><span>go for a stroll</span><span>Vol. II / No. 01</span></div>
   </div>
 
   <div class="paper">
-
-    <!-- COLUMN 1: HERO STORY -->
-    <div class="story">
-      <div class="kicker">Pamplona</div>
-      <h2>Pamplona Rain Story</h2>
-      <div class="placeholder" style="height:200px">DROP HERO PHOTO HERE — PAMPLONA</div>
-      <p>walking in the rain all day to Pamplona trading in my 500 usd waterproof outfit for a 3 euro parka and the kind shopkeeper...</p>
+    
+    <!-- COLUMN 1: LEFT SIDEBAR -->
+    <div class="col-left">
+      <div class="story">
+        <div class="kicker">Saint Jean Pied De Port</div>
+        <h2>The Trailhead</h2>
+        <p>Just walk and enjoy the day</p>
+        <a href="start.webp"><img src="start.webp" alt="Trailhead" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Saint Jean Pied De Port</div>
+        <a class="continued" href="start.html">Continued →</a>
+      </div>
+      
+      <div class="story">
+        <div class="kicker">Toro</div>
+        <h2>Mess with the Bull</h2>
+        <p>Afternoon activities</p>
+        <a href="ohsht.webp"><img src="ohsht.webp" alt="Toro" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Toro</div>
+        <a class="continued" href="toro.html">Continued →</a>
+      </div>
     </div>
 
-    <!-- COLUMN 2 -->
-    <div style="display:grid;gap:14px;">
+    <!-- COLUMN 2: CENTER BROAD COLUMN -->
+    <div class="col-center">
 
-      <div class="story">
-        <div class="kicker">Gear</div>
-        <h2 style="font-size:22px;">ENTER TITLE HERE — Gear</h2>
-        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
-        <a class="continued" href="gear.html">Continued →</a>
+      <!-- ARTICLE 1 -->
+      <div class="story lead-feature">
+        <div class="kicker">Upon Arrival</div>
+        <h2>Out of the Woods</h2>
+        <a href="parad.webp"><img src="parad.webp" alt="Celebrations" width="800" height="500" loading="lazy"></a>
+        <div class="tiny">Fig. 02 — dancing in the streets — Photo: J Hinterfeller</div>
+        <p>Every time I came out of the woods into a city, they had celebrations</p>
+        <h3>Honoring the patron saints, I was amazed by my great fortune of timing</h3>
+        <p>try to find out where this was and write the story, not sure if i will use the link but leave it for now</p>
+       <a href="blank put link here" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #0066cc;">Explore the National Museum of Anthropology</a>
+
       </div>
 
-      <div class="story">
-        <div class="kicker">Food</div>
-        <h2 style="font-size:22px;">ENTER TITLE HERE — Food</h2>
-        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
-        <a class="continued" href="food.html">Continued →</a>
+      <!-- ARTICLE 2 -->
+      <div class="story lead-feature">
+        <div class="kicker">Ponferrada</div>
+        <h2>Castillo de los Templarios</h2>
+        <a href="ponf.webp"><img src="ponf.webp" alt="Castillo" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Fig. 01 — Castillo de los Templarios — Photo: J Hinterfeller</div>
+        <p>Walking around this castle gave off a range of vibes from nostalia to eerie</p>
+        <p>A twelfth century castle built to protect the pilgrims</p>
       </div>
 
+      <!-- ARTICLE 3 -->
+      <div class="story lead-feature">
+        <div class="kicker">Opulent Opals</div>
+        <h2>Opals</h2>
+        <a href="mex.webp"><img src="mex.webp" alt="Opals" width="800" height="500" fetchpriority="high"></a>
+        <div class="tiny">Fig. 01 — Somewhere in Mexico — Photo: J Hinterfeller</div>
+        <p>While on a day trip from Guadalajara to Lake Chapala, the largest lake in Mexico, we made a pit stop in a small one-horse town. There were only a few buildings on each side of the road and we just pulled into the first one on the right. Inside there was the largest collection of opals I had ever seen. Giant unfinished stones dark like red wine, and small white ones with a beautiful mosaic of blue, pink, green, red, and purple sparkles. There were rough stones unfinished, polished gemstones, finished jewelry, artwork like turtles and birds inlaid with the magical stones. For a moment, I felt like I was in a secret chamber of a king's treasure trove. There were giant purple geodes from Brazil around the corners of the store. I believe they were the only things the owners did not produce themselves. In the back two rooms you could see different sized saws, tumblers, polishers, and all the hand tools situated around a couple of desks with lamps at different angles. The owners were a very friendly couple in their early to mid-50s. The lady stood behind the counter and answered any questions, and the man was out walking around the store. He noticed our interest and offered to take us to mine our own gems. I think we paid around 60 pesos, which at the time was equivalent to $5 — not bad for a group of four adults and two children.</p>
+        <p>The tall man walked us out and got into his little pickup truck. It was an old Volkswagen Rabbit pickup, maybe early 1980s. This truck had paid its way time and time again and it was still going. Who knows how many miles it had, but I know that it was 2009 and it had not been restored. We followed him in the new Honda Accord (which seemed bigger than the pickup) up an old gravel road. We kept a little distance, as it was not rainy season and clouds of dust rolled off his tires. A few miles later he pulled off to the side of the road. A modest, well-kept home was down the hill to the right, and on the left was a lean-to shelter for animals. His home was not what you might expect for a man with such a large collection of jewels, but it was nice. The yard was a conglomeration of gardens, flower and vegetable. A couple of sheds with weathered gray wood and rusted corrugated metal roofs stood nearby, along with a chicken coop, a couple of burros, a little family of pigs, and bird feeders in the trees. The trees and the little hill that the road sat on created a nice shaded protection to keep the blazing summer sun at bay. He asked us to wait, and he went down to a shed and grabbed the tools we would use for mining: rock hammers, the kind that look like a miniature pickaxe on one end, used for chipping, and a square flat hammer head on the other, used for crushing. That was all. We got back in the car, and this time we didn't drive as far, maybe half a mile. There it was, the opal mine. It was a big hole carved out of the ground. The upper half had once been a mound; the back side, still intact and facing us, was a sheared-off rock wall with about six inches of gravel and burnt yellow grass left over, suggesting a beautiful green pasture had surrounded us only months before. There was a bit of a language barrier, and this man was having a little fun with it for his own enjoyment. He handed us the hammers and pointed at the large rock wall. The two of us men eagerly grabbed the hammers and started down what looked like a path where a large dump truck could back down to the edge of the wall. We started beating away at the earth, feeling every vibration ring down from hand to wrist to elbow. Clang, clang, clang, we beat away, squinting our eyes in case a small rock chip found a way around our sunglasses. We had no idea what we were supposed to be looking for, and I sure didn't see anything shiny. The man stood at the top of the hill with the women and children, encouraging us to continue with a sly grin on his face. Then he grabbed a couple of square stones about the size of bowling balls and handed one to each of the ladies. He showed them how to strike the top of the cube so a slice came off like a piece of bread. I watched while I kept beating at the wall, wondering what the hell I had gotten myself into. A good bit of sweat was pouring down my face, and I was in the shade. But that was part of the secret, I couldn't see the shiny glimmers in the shade, but the women were up there saying "ooh" and "aah" at each slice they chiseled off, revealing a new array of glimmering rainbows. Nothing you could isolate and make into a gem, but the whole stone was covered in thin shards of opal, thin like the cover glass of a microscope slide, only about half that thickness. We caught on and ran up to seek our fortune. About 20 minutes passed, and the old man took a liking to our ambition and determination, so he decided to continue the tour. We got into the cars and drove further on, another mile, then got out and walked. As we walked, we passed a shrine with the Virgin Mary sitting on top; he told us this was his family's grave. Fifty meters past that we came upon a huge hole in the ground, and I figured this one would turn out just like the first. He stopped there, and we found stones about half the size of the first ones. We chipped once or twice and he said "Bueno" and waved us on. The next pile of rocks was smaller, then further on smaller still, and finally, with his clever smile, he said "dinamita," and we all had a laugh. There we were, beating at a mound of rock with tiny rock hammers, and he was using dynamite. At this point we were all quite fond of each other, and we made it to his final phase, the small pile of stones about the size of a nickel or smaller. We had to be careful of little golden scorpions, as they blended in well with the pile. I found about six little opals, and no one left empty-handed. But really, I walked away feeling wealthy with an experience of camaraderie and hospitality that maybe few have been able to glimpse, a window into this family's livelihood, and how these brilliant, vibrant stones come from the earth and are made into jewelry.</p>
+      </div>
+      
+    </div>
+    
+    <!-- COLUMN 3: RIGHT COLUMN -->
+    <div class="col-right">
+      <div class="story">
+        <div class="kicker">Bungalows</div>
+        <h2>Mayan Bungalow Near Chichén</h2>
+        <p>ENTER SHORT INTRO PARAGRAPH HERE</p>
+        <a href="Bungalow_res.webp"><img src="Bungalow_res.webp" alt="Mayan Bungalow" width="400" height="300" loading="lazy"></a>
+        <div class="tiny">Xcalacoop Mayan Bungalow Near Chichén</div>
+        <a class="continued" href="bungalows.html">Continued →</a>
+      </div> 
+
+      <div class="story">
+        <div class="kicker">Medicine</div>
+        <h2>Medicine Man</h2>
+        <p>ENTER SHORT INTRO PARAGRAPH HERE</p>
+        <div class="tiny">DROP PHOTO HERE, THEN DELETE THIS LINE</div>
+        <a class="continued" href="medicine-man.html">Continued →</a>
+      </div>
     </div>
 
-    <!-- COLUMN 3 -->
-    <div style="display:grid;gap:14px;">
+  </div> <!-- End of Paper Grid -->
+</div> <!-- End of Wrap -->
 
-      <div class="story">
-        <div class="kicker">Favorite Stops</div>
-        <h2 style="font-size:22px;">ENTER TITLE HERE</h2>
-        <div class="placeholder" style="height:130px">DROP PHOTO HERE</div>
-        <a class="continued" href="favorite-stops.html">Continued →</a>
-      </div>
-
-      <div class="story">
-        <div class="kicker">Next Page</div>
-        <h3 style="font-size:16px;">To Be Continued</h3>
-        <p>More miles, more stories. This page will grow.</p>
-      </div>
-
-    </div>
-
-  </div>
-</div>
-
-<footer>IN RUINS — CAMINO</footer>
+<footer>IN RUINS — MEXICO</footer>
 </body>
 </html>
